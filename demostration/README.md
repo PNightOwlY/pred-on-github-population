@@ -6,7 +6,7 @@ ML code and Debug: *Mandus, Ying Peng*
 The detailed settings could be read in the Steps.md(step1-step3 are for Orchestration VM).  
 git clone:  
 ```
-https://github.com/Junjie-Chu/DE2_Project.git
+https://github.com/PNightOwlY/pred-on-github-population.git
 ```
 Note: Be careful with the position of your key and authority of the key.(i.e. chmod 600 DE2_group11.pem)  
 
@@ -15,7 +15,7 @@ Note: Be careful with the position of your key and authority of the key.(i.e. ch
 
 Command:  
 ```
-python3 DE2_Project/openstack-client/single_node_with_docker_ansible_client/start_instances.py
+python3 pred-on-github-population/openstack-client/single_node_with_docker_ansible_client/start_instances.py
 ```
 ## 3. Revise the hosts IP
 According to the IP of our instances, edit the file.  
@@ -61,7 +61,7 @@ docker run -it imagename filename.py
 Note: if you want to make the containers communicate with the outside VM more easily, you could use ***volumes***.
 We would like to make each container more isolated. So we do not do that.  
 ```
-docker cp /home/DE2_Project/ci_cd/development_server/trainmodel.py 10704c9eb7bb:/app
+docker cp /home/pred-on-github-population/ci_cd/development_server/trainmodel.py 10704c9eb7bb:/app
 ```
 4. Log in the container and run new modeltraining.py  
 ```
@@ -70,7 +70,7 @@ python3 new modeltraining.py
 ```
 5. Copy the result from containers to the VM   
 ```
-docker cp 10704c9eb7bb:/app/model.name /home/DE2_Project/ci_cd/development_server/
+docker cp 10704c9eb7bb:/app/model.name /home/pred-on-github-population/ci_cd/development_server/
 ```
 ## 6. Compare the models
 Select the best one!    
@@ -143,7 +143,7 @@ ssh -i /home/ubuntu/cluster-keys/cluster-key appuser@192.168.2.89
 ```
 3.Change work dir  
 ```
-cd /home/DE2_Project/ci_cd/production_server
+cd /home/pred-on-github-population/ci_cd/production_server
 ```
 4.Set up  
 On prod1:  
