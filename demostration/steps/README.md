@@ -7,7 +7,7 @@ ssh -i /Users/mac/Desktop/HU_2020/H20_Period4/DE2/Project/DE2_Project/DE2_group1
 ```
 git clone:
 ```
-https://github.com/Junjie-Chu/DE2_Project.git
+https://github.com/PNightOwlY/pred-on-github-population
 ```
 Note: Be careful with the position of your key and authority of the key.(i.e. chmod 600 DE2_group11.pem)
 
