@@ -8,11 +8,13 @@ The workflow of the project could be described as:first, we extract features, pe
 
 
 ## Architecture of Working Environment
-The framework of our project is shown in the figure 1. We have 5 VMs in total: One VM as the orchestrationVM, development cluster(several containers in the development VM and a Ray cluster consisting of 2 VMs),production cluster(a Docker Swarm cluster consisting of 2 VMs).
+The framework of our project is shown in the figure 1. We have 5 VMs in total: One VM as the orchestrationVM, development cluster(several containers in the development VM and a Ray cluster consisting of 2 VMs),production cluster(a Docker Swarm cluster consisting of 2 VMs).  
+
 <div align=center>
 <img src="/result/Architecture.png">
 </div>
-An important part of our framework is the development cluster(Ray cluster).  Since the most time-consumingpart of machine learning model training is the selection, tuning and adjustment of model parameters, we intro-duced the Ray cluster. It consists of two parts, a development server(head node) and several parameter servers.We do the feature extraction and selection, model selection in the development server.  After we choose thecandidate models, we will make use of the Ray cluster to do the parameters selection and evaluate them.  
+An important part of our framework is the development cluster(Ray cluster).  Since the most time-consumingpart of machine learning model training is the selection, tuning and adjustment of model parameters, we intro-duced the Ray cluster. It consists of two parts, a development server(head node) and several parameter servers.We do the feature extraction and selection, model selection in the development server.  After we choose thecandidate models, we will make use of the Ray cluster to do the parameters selection and evaluate them.    
+
 
 In this project, docker swarm was used to deploy the services in production VMs, which make the whole systemmore stable and to have a high availability. On the middle right of the figure 1, we deployed development andparameter tuning VMs, we tune the models in Ray Cluster which can speed up the whole process.  The bestset of parameters will be used to train different models in different containers, and the best model will push bygit-hooks from development VM to production1 and production2 VMs.  
 
