@@ -9,5 +9,7 @@ In this mini research project, your task is to study which prediction model has 
 The set will consist of historical data on top 1000 open source projects with at least 50 stars (or based on your own observation after looking at the star count of repositories). The data can be collected by using GitHub API. Please look into the following links of how to use the API and query GitHub for getting 1000 projects by star count:
 
 https://docs.github.com/en/rest
+
 https://docs.github.com/en/rest/overview/resources-in-the-rest-api#pagination 
+
 https://docs.github.com/en/github/searching-for-information-on-github/searching-for-repositories#search-by-number-of-stars
