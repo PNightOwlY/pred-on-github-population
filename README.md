@@ -28,3 +28,14 @@ On the production server, we run multiple containers.  The containers guarantee 
 In order to facilitate the reproduction and management of the project, we have automated and orchestrated mostof the steps of the project.  Generally speaking, Openstack API is responsible for the automation of creatinginstances  on  Openstack  and  configuring  their  basic  environment,  Ansible  is  responsible  for  managing  andmonitoring the VMs, the Ansible playbook is responsible for automatically configuring the detailed operatingenvironment and running programs of each instance,  the CI/CD technology(git hook) is used to realize theautomatic push of the latest models to the production server.  Most of the configurations including ci/cd areorchestrated by Ansible.  Jupyternotebook is used to help to edit the code.  Part of the construction of Raycluster and Swarm cluster is also completed automatically by Ansible.  But some other settings of the clustersneed to be done manually.  
 
 Our development cluster is a Ray cluster.  It helps us to speed up the training of our models and parameterstuning. We use Docker Swarm to manage our production cluster. It contains 2 VMs. Docker Swarm providesa set of highly available Docker cluster management solutions, which fully supports the standard Docker API,facilitates the management and scheduling of cluster Docker containers,  and makes full use of cluster hostresources.Both the production cluster and the development cluster have scalability in our architecture
+
+## Demostration
+The demostration can be viewed in the demostration folder.
+
+## Analysis
+The result that analysis by us can be viewed in the result folder.
+
+## Contribution
+The project was managed by the four students in Uppsala University.
+
+
