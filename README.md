@@ -1,6 +1,6 @@
 # Evaluating the accuracy of prediction of stargazers in open source projects
 ## Background
-<img src='result/Architecture'>
+<img src='/result/Architecture'>
 With the advent of social media, the idea of popularity is used to identify who is performing better than the others. For example, YouTube subscribers can be used as a direct measure for a channel's popularity. Similarly, GitHub users show their appreciation for a project by putting stargazer (or star) to the project.   
 Therefore, the number of stargazers indicate the popularity of a GitHub project.  
 
